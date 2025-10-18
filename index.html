@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MonOS - Minimalist Web Operating System</title>
+    <title>MonOpSy - Minimalist Web Operating System</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -1123,7 +1123,7 @@
 <body>
     <!-- Boot Screen -->
     <div class="boot-screen" id="bootScreen">
-        <div class="boot-logo">MonOS</div>
+        <div class="boot-logo">MonOpSy</div>
         <div class="boot-text">Minimalist Operating System</div>
         <div class="boot-progress">
             <div class="boot-progress-bar" id="bootProgressBar"></div>
@@ -1220,7 +1220,7 @@
     <!-- Notification -->
     <div class="notification" id="notification">
         <div class="notification-title" id="notificationTitle">Welcome</div>
-        <div class="notification-message" id="notificationMessage">MonOS is ready</div>
+        <div class="notification-message" id="notificationMessage">MonOpSy is ready</div>
     </div>
 
     <script>
@@ -1234,11 +1234,11 @@
         
         // LocalStorage Keys
         const STORAGE_KEYS = {
-            SETTINGS: 'monos_settings',
-            TODO_ITEMS: 'monos_todo_items',
-            TEXT_EDITOR_CONTENT: 'monos_text_editor_content',
-            WINDOW_STATES: 'monos_window_states',
-            UPLOADED_FILES: 'monos_uploaded_files'
+            SETTINGS: 'monopsy_settings',
+            TODO_ITEMS: 'monopsy_todo_items',
+            TEXT_EDITOR_CONTENT: 'monopsy_text_editor_content',
+            WINDOW_STATES: 'monopsy_window_states',
+            UPLOADED_FILES: 'monopsy_uploaded_files'
         };
 
         // App Definitions
@@ -1327,14 +1327,7 @@
                                 <input type="text" class="browser-url" id="browserUrl" placeholder="Enter URL..." value="https://example.com">
                                 <button class="browser-nav-btn" onclick="loadUrl()"><i class="fas fa-arrow-right"></i></button>
                             </div>
-                            <div class="browser-content">
-                                <div class="browser-loading hidden" id="browserLoading"><i class="fas fa-spinner fa-spin"></i> Loading...</div>
-                                <div id="browserError" class="browser-error hidden">
-                                    <h3>Unable to load this website</h3>
-                                    <p>This website cannot be loaded due to security restrictions. Some websites like Google block embedding in iframes.</p>
-                                    <button onclick="openInNewTab()">Open in New Tab</button>
-                                </div>
-                                <iframe class="browser-iframe" id="browserIframe" src="https://example.com"></iframe>
+                                <iframe class="browser-iframe" id="browserIframe" src="https://najahcreates.netlify.app"></iframe>
                             </div>
                         </div>
                     </div>
@@ -1398,8 +1391,8 @@
                             </div>
                             <div class="settings-section">
                                 <h3>About</h3>
-                                <p>MonOS Version 1.0.0</p>
-                                <p>Minimalist Web Operating System</p>
+                                <p>MonOpSy Version 1.0.0</p>
+                                <p>Minimalist Open Source Web Operating System developed by <a href="https://github.com/najahcreates/MonOpSy">NajahCreates<a></p>
                             </div>
                         </div>
                     </div>
@@ -1470,8 +1463,8 @@
                         <div class="music-player">
                             <div class="player-album"><i class="fas fa-music"></i></div>
                             <div class="player-info">
-                                <div class="player-title">Sample Song</div>
-                                <div class="player-artist">Artist Name</div>
+                                <div class="player-title">Kaayi</div>
+                                <div class="player-artist">Baby Jean</div>
                             </div>
                             <div class="player-controls">
                                 <button class="player-btn" onclick="previousTrack()"><i class="fas fa-step-backward"></i></button>
@@ -1510,7 +1503,7 @@
             // Hide boot screen after 1.5 seconds
             setTimeout(() => {
                 bootScreen.classList.add('hidden');
-                showNotification('Welcome to MonOS', 'System is ready');
+                showNotification('Welcome to MonOpSy', 'System is ready');
                 startClock();
                 
                 // Restore window states if available
@@ -2196,7 +2189,7 @@
             if (isPlaying) {
                 btn.innerHTML = '<i class="fas fa-pause"></i>';
                 startProgress();
-                showNotification('Playing', 'Now playing: Sample Song');
+                showNotification('Playing', 'Now playing: kaayi');
             } else {
                 btn.innerHTML = '<i class="fas fa-play"></i>';
                 stopProgress();
