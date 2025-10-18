@@ -586,6 +586,7 @@
         .lock-option {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             align-items: center;
             cursor: pointer;
             transition: transform 0.2s ease;
@@ -3367,7 +3368,7 @@
             
             // Save setting to LocalStorage
             const settings = JSON.parse(localStorage.getItem(STORAGE_KEYS.SETTINGS) || '{}');
-            settings.lockScreen = isActive;
+            settingsScreen = isActive;
             localStorage.setItem(STORAGE_KEYS.SETTINGS, JSON.stringify(settings));
             
             showNotification('Setting Changed', `Lock screen is now ${isActive ? 'enabled' : 'disabled'}`);
