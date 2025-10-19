@@ -155,15 +155,7 @@
                                     <span class="setting-label">Animations</span>
                                     <div class="toggle-switch active" onclick="toggleSetting(this)"></div>
                                 </div>
-                                <div class="setting-item">
-                                    <span class="setting-label">Wallpaper</span>
-                                    <select id="wallpaperSelect" onchange="changeWallpaper(this.value)">
-                                        <option value="https://picsum.photos/seed/monopsy/1920/1080.jpg">Default</option>
-                                        <option value="https://picsum.photos/seed/nature/1920/1080.jpg">Nature</option>
-                                        <option value="https://picsum.photos/seed/city/1920/1080.jpg">City</option>
-                                        <option value="https://picsum.photos/seed/abstract/1920/1080.jpg">Abstract</option>
-                                    </select>
-                                </div>
+                                
                             </div>
                             <div class="settings-section">
                                 <h3>System</h3>
@@ -190,7 +182,7 @@
                             <div class="settings-section">
                                 <h3>About</h3>
                                 <p>MonOpSy Version 2.0.0</p>
-                                <p>Minimalist Open Source Web Operating System developed by <a href="https://github.com/najahcreates/MonOpSy">NajahCreates</a></p>
+                                <p>Minimalist Open Source Web Operating System developed by <a href="https://github.com/Muhammednajah/MonOpSy">NajahCreates</a></p>
                             </div>
                         </div>
                     </div>
@@ -1471,7 +1463,8 @@
                         date - Show current date and time<br>
                         about - About MonOpSy<br>
                         apps - List all applications<br>
-                        sysinfo - System information
+                        sysinfo - System information<br>
+                        opensource - Get the Link to contribute
                     `;
                     break;
                 case 'clear':
@@ -1494,6 +1487,14 @@
                         Language: ${navigator.language}<br>
                         Online: ${navigator.onLine ? 'Yes' : 'No'}
                     `;
+                    break;
+                case 'opensource':
+                    output.innerHTML = 'https://github.com/Muhammednajah/MonOpSy'
+                    break;
+                case 'easteregg':
+                    output.innerHTML = `You found the Easter Egg, go to this website and claim your reward <br>
+                    https://regiochess.netlify.app <br>
+                    Your free chess website`
                     break;
                 default:
                     if (command.trim() === '') return;
